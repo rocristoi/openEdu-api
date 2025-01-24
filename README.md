@@ -58,4 +58,4 @@ For proper backend operation, include a Firebase service account file named `ser
 - The backend primarily communicates with the PostgreSQL database using the `pg` library, ensuring efficient data operations.
 - Please ensure the environment variables are set correctly before running the application, as they control critical aspects of its functionality and security.
 
-Contributions to improve the backend functionality are welcome under the MIT License.
+Contributions to improve the backend functionality are welcome under the Apache License.
