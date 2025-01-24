@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const https = require('https');
 const cors = require('cors'); 
 const { Pool } = require('pg');
 const nodemailer = require('nodemailer')
@@ -816,6 +817,13 @@ app.post('/excusePeriod', checkAuth, async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+const options = {
+  key: fs.readFileSync(process.env.SSL_PRIVKEY),
+  cert: fs.readFileSync(process.env.SSL_CERT),
+  ca: fs.readFileSync(process.env.SLL_CERTBUNDLE),
+  rejectUnauthorized: true 
+};
+
+https.createServer(options, app).listen(port, () => {
+  console.log(`Secure backend server running at https://api.openedu.live:${port}`);
 });
