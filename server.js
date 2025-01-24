@@ -821,7 +821,7 @@ app.post('/excusePeriod', checkAuth, async (req, res) => {
 const options = {
   key: fs.readFileSync(process.env.SSL_PRIVKEY),
   cert: fs.readFileSync(process.env.SSL_CERT),
-  ca: fs.readFileSync(process.env.SLL_CERTBUNDLE),
+  ca: fs.readFileSync(process.env.SSL_CERTBUNDLE),
   rejectUnauthorized: true 
 };
 
