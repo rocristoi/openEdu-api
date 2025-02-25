@@ -818,6 +818,10 @@ app.post('/excusePeriod', checkAuth, async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.redirect('https://github.com/rocristoi/openEdu-api');
+});
+
 const options = {
   key: fs.readFileSync(process.env.SSL_PRIVKEY),
   cert: fs.readFileSync(process.env.SSL_CERT),
