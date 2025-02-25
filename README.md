@@ -37,6 +37,7 @@ SSL_CERTBUNDLE=  # Path to SSL certificate bundle
 ## Endpoints
 
 All endpoints are protected by Firebase authentication to ensure secure data handling and prevent unauthorized access. Each request is authenticated and authorized against Firebase to verify the sender's identity.
+- **GET /**: Redirects the user to this page.
 
 - **GET /userInfo**: Returns data to the frontend to decide which dashboard to display to the user, including necessary user information obtained from the PostgreSQL database.
 
